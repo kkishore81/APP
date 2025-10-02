@@ -1,0 +1,5 @@
+{
+  "name": "Splitwise Clone",
+  "description": "A web application to manage shared expenses with friends and family. Track bills, split costs, and see who owes who. Features a smart expense creation tool powered by Gemini.",
+  "requestFramePermissions": []
+}
