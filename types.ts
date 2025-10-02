@@ -1,7 +1,13 @@
+export interface User {
+  id: string;
+  name: string;
+  email: string | null;
+}
 
 export interface Member {
   id: string;
   name: string;
+  balance: number;
 }
 
 export interface Expense {
@@ -10,25 +16,24 @@ export interface Expense {
   description: string;
   amount: number;
   paidById: string;
-  splitWithIds: string[];
-  date: string;
+  paidByName: string;
+  splitWith: { memberId: string; amount: number }[];
+  createdAt: Date;
+  isSettlement?: boolean;
 }
 
 export interface Group {
   id: string;
   name: string;
   members: Member[];
-}
-
-export interface Balance {
-  memberId: string;
-  name: string;
-  amount: number;
+  memberIds: string[]; // Added for security rules
+  expenses: Expense[];
+  createdBy: string;
 }
 
 export interface ParsedExpense {
-  description: string | null;
-  totalAmount: number | null;
-  paidBy: string | null;
-  splitWith: string[] | null;
+  description: string;
+  totalAmount: number;
+  paidBy: string;
+  splitWith: string[];
 }

@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import Modal from './Modal';
 import Button from './Button';
-// fix: Explicitly import from the .tsx file to resolve module ambiguity.
+// Fix: Explicitly import from .tsx file to resolve conflict with empty .ts file.
 import { useSplitwise } from '../hooks/useSplitwise.tsx';
 import type { Group } from '../types';
 

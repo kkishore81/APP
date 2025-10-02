@@ -29,7 +29,7 @@ const GroupList: React.FC<GroupListProps> = ({ groups, selectedGroupId, onSelect
                   </div>
                   <div>
                     <p className={`font-semibold ${selectedGroupId === group.id ? 'text-teal-700' : 'text-gray-800'}`}>{group.name}</p>
-                    <p className="text-sm text-gray-500">{group.members.length} members</p>
+                    <p className="text-sm text-gray-500">{group.memberIds.length} members</p>
                   </div>
               </div>
             </button>
